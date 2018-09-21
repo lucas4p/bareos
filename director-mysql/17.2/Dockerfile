@@ -1,6 +1,5 @@
 # BareOS director Dockerfile
-FROM       ubuntu:xenial
-MAINTAINER lucas4p
+FROM       ubuntu:16:04
 
 ENV DEBIAN_FRONTEND noninteractive
 

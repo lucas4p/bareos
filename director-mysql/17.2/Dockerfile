@@ -1,6 +1,6 @@
 # BareOS director Dockerfile
-FROM       barcus/ubuntu:xenial
-MAINTAINER Barcus <barcus@tou.nu>
+FROM       ubuntu:xenial
+MAINTAINER lucas4p
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -13,6 +13,7 @@ RUN curl -Ls http://download.bareos.org/bareos/release/17.2/xUbuntu_16.04/Releas
     echo 'postfix postfix/main_mailer_type select No configuration' | debconf-set-selections && \
     apt-get update -qq && \
     apt-get install -qq -y bareos bareos-database-mysql mysql-client && \
+    apt-get install bareos-vmware-plugin && \
     apt-clean
 
 COPY docker-entrypoint.sh /

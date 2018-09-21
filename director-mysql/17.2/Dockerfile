@@ -1,5 +1,5 @@
 # BareOS director Dockerfile
-FROM       ubuntu:16:04
+FROM       ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 

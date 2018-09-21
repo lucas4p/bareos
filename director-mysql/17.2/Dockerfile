@@ -1,5 +1,6 @@
 # BareOS director Dockerfile
-FROM       ubuntu:16.04
+FROM       barcus/ubuntu:xenial
+MAINTAINER Barcus
 
 ENV DEBIAN_FRONTEND noninteractive
 

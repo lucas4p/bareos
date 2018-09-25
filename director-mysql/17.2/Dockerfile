@@ -13,8 +13,6 @@ RUN curl -Ls http://download.bareos.org/bareos/release/17.2/xUbuntu_16.04/Releas
     echo 'postfix postfix/main_mailer_type select No configuration' | debconf-set-selections && \
     apt-get update -qq && \
     apt-get install -qq -y bareos bareos-database-mysql mysql-client python-pip python-wheel && \
-    pip install --upgrade pip  && \
-    pip install pyvmomi && \
     apt-get install -qq -y bareos-vmware-plugin bareos-vmware-plugin-compat && \
     apt-clean
 
